@@ -1,0 +1,31 @@
+{
+  "measuredAt": "2026-08-18T12:26:36.933Z",
+  "next": "16.3.1",
+  "note": "Prerendered routes only. Bytes are of the JS files the emitted HTML asks the browser to fetch.",
+  "routes": {
+    "/": {
+      "files": 7,
+      "raw": 575731,
+      "gzip": 175957,
+      "brotli": 151731
+    },
+    "/signup": {
+      "files": 6,
+      "raw": 567403,
+      "gzip": 172957,
+      "brotli": 149271
+    },
+    "/_global-error": {
+      "files": 6,
+      "raw": 567403,
+      "gzip": 172957,
+      "brotli": 149271
+    },
+    "/_not-found": {
+      "files": 6,
+      "raw": 567403,
+      "gzip": 172957,
+      "brotli": 149271
+    }
+  }
+}

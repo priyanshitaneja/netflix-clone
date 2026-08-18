@@ -1,0 +1,72 @@
+.wrap {
+  min-height: 70vh;
+  display: grid;
+  place-content: center;
+  padding: clamp(1.5rem, 6vw, 4rem);
+}
+
+.card {
+  width: min(100%, 26rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  font-size: var(--step-3);
+  font-weight: 800;
+}
+
+.step {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lede {
+  margin: 0;
+  color: var(--text);
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0 0.75rem;
+  background: #fff;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius);
+  color: #111;
+}
+
+.cta {
+  min-height: 3.25rem;
+  background: var(--nf-red);
+  border: 0;
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: var(--step-1);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: var(--nf-red-hover);
+}
+
+.error {
+  margin: 0;
+  color: #ffa00a;
+  font-size: var(--step--1);
+}
+
+.note {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: var(--step--1);
+}
