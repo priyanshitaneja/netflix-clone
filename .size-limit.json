@@ -1,0 +1,8 @@
+[
+  {
+    "name": "all client JS (coarse gate)",
+    "path": ".next/static/chunks/**/*.js",
+    "limit": "200 kB",
+    "gzip": true
+  }
+]

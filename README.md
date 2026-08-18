@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# netflix-clone
 
-## Getting Started
+A Netflix clone built as a teaching vehicle for Netflix's **published** web engineering
+practices — scalability, resilience, performance — where every technique traces to a real
+article and every claim is measured rather than asserted.
 
-First, run the development server:
+Not a UI pastiche. The curriculum lives in [`docs/`](./docs), every lesson names its
+source, and `docs/measurement/ledger.json` holds the before/after numbers measured on this
+machine — including the ones where the technique made no measurable difference at our
+scale.
+
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**No API key required.** The app ships committed fixtures shaped exactly like TMDB
+responses and runs fully offline. To use live data, copy `.env.example` to `.env.local`
+and add a free [TMDB](https://www.themoviedb.org/settings/api) key — the fixture/live
+branch exists in exactly one module, so nothing else changes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Attribution
 
-## Learn More
+This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise
+approved by TMDB.
 
-To learn more about Next.js, take a look at the following resources:
+Video assets are open test content (Tears of Steel, Big Buck Bunny) served over DASH and
+HLS. There is no DRM: obtaining a Widevine CDM licence requires a commercial agreement, so
+this project uses clear streams only.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Phase 0 of 10 — scaffold and guardrails. See the build order in the plan.
