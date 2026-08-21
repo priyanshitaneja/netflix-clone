@@ -1,0 +1,63 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 101,
+      "title": "The Cartographer's Daughter",
+      "overview": "A mapmaker's daughter retraces her father's final expedition using only his annotated charts, and finds the blank spaces were deliberate.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "vote_average": 8.4,
+      "release_date": "2024-03-12",
+      "genre_ids": [
+        18,
+        12
+      ],
+      "adult": false
+    },
+    {
+      "id": 108,
+      "title": "Salt and Silver",
+      "overview": "Two rival photographers document the same disappearing coastline for forty years, and argue about what they saw.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "vote_average": 7.9,
+      "release_date": "2019-01-10",
+      "genre_ids": [
+        18,
+        12
+      ],
+      "adult": false
+    },
+    {
+      "id": 118,
+      "title": "The Petrichor Line",
+      "overview": "A weather engineer who can smell rain three days out is recruited to explain why a whole region has stopped smelling like anything.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "vote_average": 7.8,
+      "release_date": "2024-02-11",
+      "genre_ids": [
+        878,
+        12
+      ],
+      "adult": false
+    },
+    {
+      "id": 107,
+      "title": "Grand Tour of Nowhere",
+      "overview": "A travel show host whose destination keeps getting cancelled makes the increasingly desperate journey itself the programme.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "vote_average": 6.8,
+      "release_date": "2020-09-18",
+      "genre_ids": [
+        35,
+        12
+      ],
+      "adult": false
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 4
+}
