@@ -32,4 +32,28 @@ this project uses clear streams only.
 
 ## Status
 
-Phase 0 of 10 — scaffold and guardrails. See the build order in the plan.
+**Phase 2 of 10** — fixtures, the REST BFF, and every browse surface, running with no API
+key. Deliberately naive: no circuit breaker, no bulkheads, no request collapsing, no
+virtualization, no image optimization. Those are Phases 4 and 5, and each one has to prove
+itself against a number measured on this tree first.
+
+What works today: `/`, `/signup`, `/profiles`, `/browse`, `/title/[id]`, `/genre/[id]`,
+`/search`, `/my-list`, plus the REST BFF at `/api/bff/page/[shape]`.
+
+Two things exist only to be measured against, and nothing links to either:
+
+- **`/browse?rows=client`** assembles the same page the wrong way — one request per row from
+  the browser instead of one page-shaped request. Open the network panel on both. That is
+  lesson L2.2.
+- **`x-nfc-faults`** makes any dependency misbehave, so the fallback modes can be watched
+  working rather than taken on trust:
+
+  ```bash
+  curl -H 'x-nfc-faults: tmdb.trending=status:429' localhost:3000/api/bff/page/browse
+  curl -H 'x-nfc-faults: tmdb.*=drop'              localhost:3000/api/bff/page/browse
+  ```
+
+  One dead dependency costs one row, eight cost all eight, and the page still returns 200
+  either way. Ignored in production unless `ALLOW_FAULTS=1`.
+
+See the build order in the plan.
