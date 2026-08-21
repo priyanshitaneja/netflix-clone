@@ -1,0 +1,115 @@
+.billboard {
+  position: relative;
+  isolation: isolate;
+  min-height: min(62vh, 620px);
+  display: grid;
+  align-content: end;
+  gap: 1rem;
+  padding: clamp(2rem, 8vw, 5rem) clamp(1rem, 4vw, 3.5rem) clamp(2rem, 5vw, 3rem);
+  overflow: hidden;
+}
+
+.art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/*
+ * Two gradients, not one: a bottom scrim so the copy stays legible over any artwork, and a
+ * left scrim so it stays legible over a *bright* left edge. Text contrast that depends on
+ * the image is a contrast bug that only shows up on some titles.
+ */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--bg) 4%, rgba(0, 0, 0, 0.55) 38%, rgba(0, 0, 0, 0.1) 70%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 55%);
+}
+
+.name {
+  font-size: var(--step-5);
+  font-weight: 800;
+  max-width: 22ch;
+}
+
+.facts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.match {
+  color: #46d369;
+  font-weight: 700;
+}
+
+.maturity {
+  border: 1px solid #ffffff59;
+  padding: 0 0.35rem;
+}
+
+.synopsis {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--text);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.play,
+.info {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: var(--tap);
+  padding-inline: 1.5rem;
+  border: 0;
+  border-radius: var(--radius);
+  font-size: var(--step-0);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.play {
+  background: #fff;
+  color: #000;
+}
+
+.play:hover {
+  background: #e6e6e6;
+}
+
+.info {
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.info:hover {
+  background: rgba(109, 109, 110, 0.5);
+}
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}

@@ -1,0 +1,123 @@
+.detail {
+  padding-bottom: 3rem;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(70vh, 680px);
+  display: grid;
+  align-content: end;
+  padding: clamp(3rem, 10vw, 6rem) clamp(1rem, 4vw, 3.5rem) clamp(2rem, 4vw, 3rem);
+  overflow: hidden;
+}
+
+.art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--bg) 3%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.15) 75%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0) 60%);
+}
+
+.heroBody {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 62ch;
+}
+
+.name {
+  font-size: var(--step-5);
+  font-weight: 800;
+}
+
+.facts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.match {
+  color: #46d369;
+  font-weight: 700;
+}
+
+.maturity {
+  border: 1px solid #ffffff59;
+  padding: 0 0.35rem;
+}
+
+.synopsis {
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: var(--tap);
+  padding-inline: 1.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.play:hover {
+  background: #e6e6e6;
+}
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0.5rem 0 0;
+  font-size: var(--step--1);
+}
+
+.meta dt {
+  color: var(--text-dim);
+}
+
+.meta dd {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.genreLink {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.detailSkeleton {
+  min-height: min(70vh, 680px);
+  background: linear-gradient(to top, var(--bg), #131313);
+}

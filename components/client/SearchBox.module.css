@@ -1,0 +1,49 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.6rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ffffff40;
+  border-radius: var(--radius);
+  min-height: 2.25rem;
+}
+
+.form:focus-within {
+  border-color: #fff;
+}
+
+.icon {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--text-muted);
+}
+
+.input {
+  width: clamp(8rem, 18vw, 15rem);
+  min-height: 2.25rem;
+  background: none;
+  border: 0;
+  font-size: var(--step--1);
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* The focus ring belongs on the whole control, not the bare input inside it. */
+.input:focus-visible {
+  outline: none;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

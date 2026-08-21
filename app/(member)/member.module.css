@@ -1,0 +1,107 @@
+.shell {
+  min-height: 100vh;
+}
+
+.rows {
+  display: grid;
+  /* Pull the first row up over the billboard's lower gradient, the way Netflix's does. */
+  margin-top: clamp(-4rem, -5vw, -2rem);
+  position: relative;
+  z-index: 1;
+}
+
+.page {
+  padding-block: 1rem 3rem;
+}
+
+.heading {
+  font-size: var(--step-3);
+  font-weight: 800;
+  padding: 1.5rem clamp(1rem, 4vw, 3.5rem) 0.5rem;
+}
+
+.lede {
+  margin: 0;
+  padding: 0 clamp(1rem, 4vw, 3.5rem);
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+.empty {
+  display: grid;
+  gap: 0.75rem;
+  padding: clamp(2rem, 8vw, 5rem) clamp(1rem, 4vw, 3.5rem);
+  max-width: 60ch;
+}
+
+.emptyTitle {
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+.notice {
+  margin: 1rem clamp(1rem, 4vw, 3.5rem);
+  padding: 0.85rem 1rem;
+  border: 1px solid #ffa00a55;
+  border-left: 3px solid #ffa00a;
+  border-radius: var(--radius);
+  background: #ffa00a12;
+  color: #ffd79a;
+  font-size: var(--step--1);
+  max-width: 78ch;
+}
+
+.notice code {
+  color: #fff;
+}
+
+.skeletonRow {
+  display: grid;
+  gap: 0.5rem;
+  padding-block: 0.75rem 1.25rem;
+}
+
+.skeletonHeading {
+  height: 1.4rem;
+  width: 12rem;
+  margin-inline: clamp(1rem, 4vw, 3.5rem);
+  border-radius: var(--radius);
+  background: #1c1c1c;
+}
+
+.skeletonRail {
+  display: flex;
+  gap: 0.5rem;
+  padding-inline: clamp(1rem, 4vw, 3.5rem);
+  overflow: hidden;
+}
+
+.skeletonCard {
+  flex: 0 0 auto;
+  width: 164px;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  background: #161616;
+}
+
+/*
+ * A single shimmer, not a spinner per card. Respecting prefers-reduced-motion here is not
+ * optional: a grid of ninety pulsing rectangles is exactly the kind of thing that triggers
+ * vestibular symptoms.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .skeletonCard,
+  .skeletonHeading {
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}

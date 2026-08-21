@@ -1,0 +1,42 @@
+.row {
+  display: grid;
+  gap: 0.5rem;
+  padding-block: 0.75rem 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-inline: clamp(1rem, 4vw, 3.5rem);
+}
+
+.title {
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+.algo {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.item {
+  list-style: none;
+  /* Cards are absolutely-positioned-free; the rail is a flex container and each item is a
+     flex child, so width comes from the card itself. */
+  display: flex;
+}
+
+.degraded {
+  margin: 0;
+  padding: 0.5rem clamp(1rem, 4vw, 3.5rem);
+  color: #ffa00a;
+  font-size: var(--step--1);
+}
+
+.card-w-lg {
+  --card-w: 220px;
+}

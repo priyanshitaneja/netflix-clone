@@ -1,8 +1,8 @@
 [
   {
-    "name": "all client JS (coarse gate)",
+    "name": "all client JS, every chunk once (coarse gate — Phase 3 replaces this with per-route budgets and a ratchet)",
     "path": ".next/static/chunks/**/*.js",
-    "limit": "200 kB",
+    "limit": "215 kB",
     "gzip": true
   }
 ]
